@@ -18,3 +18,12 @@ FROM CITY
 WHERE COUNTRYCODE = "USA"
 AND POPULATION > 100000
 ```
+**Prompt:** Query the NAME field for all American cities in the CITY table with populations larger than 120000. The CountryCode for America is USA.
+
+This query is virtually identical to the first prompt with some minor modifications. My query returns only the NAME field (`SELECT NAME`) of American cities where the population is larger than 120,000 (`WHERE COUNTRYCODE = "USA" AND POPULATION > 120000`).
+```sql
+SELECT NAME
+FROM CITY
+WHERE COUNTRYCODE = "USA"
+AND POPULATION > 120000
+```

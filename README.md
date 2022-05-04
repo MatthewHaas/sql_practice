@@ -68,3 +68,9 @@ SELECT DISTINCT CITY FROM STATION WHERE CITY LIKE '%a' OR CITY LIKE '%e' OR CITY
 ```sql
 SELECT DISTINCT CITY FROM STATION WHERE SUBSTR(CITY,1,1) NOT IN ('A', 'E', 'I', 'O', 'U') OR SUBSTR(CITY,LENGTH(CITY),1) NOT IN ('a', 'e', 'i', 'o', 'u');
 ```
+
+**Prompt:** Query the list of CITY names from STATION that do not start with vowels and do not end with vowels. Your result cannot contain duplicates.
+
+```sql
+SELECT DISTINCT CITY FROM STATION WHERE SUBSTR(CITY,1,1) NOT IN ('A', 'E', 'I', 'O', 'U')AND SUBSTR(CITY,LENGTH(CITY),1) NOT IN ('a', 'e', 'i', 'o', 'u');
+```

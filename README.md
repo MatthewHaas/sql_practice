@@ -50,3 +50,9 @@ WHERE MOD(ID,2) = 0
 SELECT CITY, LENGTH(CITY) FROM STATION ORDER BY Length(CITY) ASC, CITY limit 1;
 SELECT CITY, LENGTH(CITY) FROM STATION ORDER BY Length(CITY) DESC, CITY limit 1;
 ```
+
+**Prompt:** Query the list of CITY names starting with vowels (i.e., a, e, i, o, or u) from STATION. Your result cannot contain duplicates.
+
+```sql
+SELECT DISTINCT CITY FROM STATION WHERE CITY LIKE 'A%' OR CITY LIKE 'E%' OR CITY LIKE 'I%' OR CITY LIKE 'O%' OR CITY LIKE 'U%';
+```
